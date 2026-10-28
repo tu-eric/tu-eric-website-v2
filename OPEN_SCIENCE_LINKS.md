@@ -23,10 +23,17 @@ These resource URLs were found in peer-reviewed papers or trusted project pages.
 - Study 1 preregistration as listed in the Methods section: https://osf.io/5hegp/
 - Evidence: https://doi.org/10.1007/s10508-021-02138-x
 
-## Components of connection (Tu et al., 2026, preprint)
-- Public preprint: https://doi.org/10.31234/osf.io/6cxdn_v1
-- Evidence: https://sciety.org/articles/activity/10.31234/osf.io/6cxdn_v1
-- This is a **preprint**, not a published peer-reviewed article, and no additional project data or code are claimed as openly available.
+## Components of connection: RoCh Scale (Tu et al., 2026, preprint)
+- Public PsyArXiv preprint: https://doi.org/10.31234/osf.io/6cxdn_v1
+- Study 2 preregistration (exploratory structure and item analysis): https://osf.io/j3pqt/overview?view_only=ecfe677b797d4459abb20096d6d65cc9
+- Study 3 preregistration (confirmatory structure and validity): https://osf.io/umtfv/overview?view_only=1a5dd9fc932c40ddbf9f7f56622e9b3e
+- Study 4 preregistration (dyadic invariance): https://osf.io/kcuf5/overview?view_only=e2cb68fb58e1492ebe05370dcb0ad082
+- Shared data and R analysis code: https://osf.io/yksgj/?view_only=1d499945280a4acea30f2c33d76c7648
+- Evidence: These URLs appear in the "Transparency and Openness" subsections of Eric Tu's source manuscript `RoCh_ScaleDevelopment_Preprint.pdf`, under Studies 2, 3, and 4 (pages 12–13, 20, and 31–32 of the provided PDF).
+- The manuscript says study materials are **available upon request**. No claim is made that all study materials are downloadable.
+- These OSF view-only URLs were extracted from the source manuscript; external OSF access could not be independently confirmed through our browsing environment. Please test access before a public launch.
+- The manuscript's Study 3/4 openness paragraphs contain minor study-numbering typos; link labels here follow the study section each paragraph appears within.
+- This is a **preprint**, not a peer-reviewed publication.
 
 ## A renewal of dyadic structural equation modeling with latent variables (Sakaluk et al., 2025)
 - Official open-access journal article: https://doi.org/10.1111/spc3.70045
