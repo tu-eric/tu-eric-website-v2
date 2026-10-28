@@ -1,0 +1,66 @@
+/* Version 3.4: improved photo layout and compact framing. */
+/* Consistent subtle editorial frames across photographs. */
+.photo-frame {position:relative; isolation:isolate;}
+.photo-frame::before {content:"";pointer-events:none;position:absolute;inset:12px -10px 34px 12px;border:1px solid #cb9681;z-index:0;}
+.photo-frame img {position:relative;z-index:1;display:block;width:100%;border:4px solid #fffdf7;border-radius:7px;box-shadow:0 15px 33px rgba(21,38,43,.14);}
+.photo-frame figcaption {position:relative;z-index:1;}
+
+/* Research: poster photo belongs in the same row as chemistry text. */
+#chemistry .research-poster-inline {max-width:510px;margin:23px 0 8px;}
+#chemistry .research-poster-inline img {height:270px;max-height:none;object-fit:cover;object-position:center 29%;}
+#chemistry .research-poster-inline::before {bottom:32px;}
+
+/* Methods: keep poster discussion and analysis copy in a balanced row. */
+.photo-evidence-section {padding-top:53px;padding-bottom:52px;}
+.photo-evidence-grid {grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:6%;}
+.photo-evidence-img {margin:0;}
+.photo-evidence-img img {height:330px;max-height:none;object-fit:cover;object-position:center 42%;}
+
+/* Teaching: a short photo strip sits before the course feature. */
+.teaching-figure-before {max-width:100%;margin:0 auto 18px;}
+.teaching-figure-before img {height:280px;max-height:none;object-fit:cover;object-position:center 58%;}
+.teaching-figure-before figcaption {margin-top:10px;}
+.teaching-feature {margin-top:0;}
+.teaching-figure-before::before {bottom:28px;}
+
+/* About: sunset portrait at the top, adjacent to the introduction. */
+.about-hero-photo {padding:74px 0 72px;overflow:hidden;}
+.about-hero-photo .page-hero-inner {display:grid;grid-template-columns:minmax(0,1.16fr) minmax(280px,.84fr);gap:clamp(35px,5.5vw,92px);align-items:center;}
+.about-hero-photo .page-hero-inner h1 {font-size:clamp(62px,6vw,100px);margin:22px 0 28px;}
+.about-hero-photo .page-hero-inner .lede {max-width:555px;font-size:15px;line-height:1.88;}
+.about-sunset-figure {width:100%;max-width:405px;justify-self:end;margin:0 10px 0 0;}
+.about-sunset-figure img {height:430px;max-height:none;object-fit:cover;object-position:57% 51%;}
+.about-sunset-figure::before {inset:15px -12px 12px 14px;border-color:rgba(217,143,123,.72);}
+
+/* Other existing photos receive the same restrained border/shadow treatment. */
+.photo-lab-photo {margin:0;}
+.photo-lab-photo img {border-radius:7px;}
+
+@media(max-width:960px) {
+  .about-hero-photo .page-hero-inner{grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr);gap:28px;}
+  .about-sunset-figure img{height:370px;}
+}
+@media(max-width:760px) {
+  .about-hero-photo {padding:58px 0 58px;}
+  .about-hero-photo .page-hero-inner{grid-template-columns:1fr;gap:30px;}
+  .about-hero-photo .page-hero-inner h1{font-size:clamp(55px,10vw,78px);margin-bottom:20px;}
+  .about-sunset-figure{justify-self:center;width:min(365px,90%);margin:0;}
+  .about-sunset-figure img{height:370px;}
+  .photo-evidence-grid{grid-template-columns:1fr;gap:22px;}
+  .photo-evidence-img img{height:300px;max-height:none;}
+  #chemistry .research-poster-inline img{height:280px;}
+  .teaching-figure-before img{height:240px;max-height:none;}
+}
+@media(max-width:520px) {
+ .photo-frame::before{inset:10px -6px 28px 8px;}
+ .about-sunset-figure img{height:340px;}
+ .about-sunset-figure::before{inset:10px -7px 10px 8px;}
+ .teaching-figure-before img{height:210px;}
+ .photo-evidence-img img{height:240px;max-height:none;}
+ #chemistry .research-poster-inline img{height:235px;}
+}
+/* Wider than a portrait, but not so wide that the speaker is lost in a thin strip. */
+.teaching-figure-before {max-width:900px; margin:0 auto 19px;}
+.teaching-figure-before img {height:375px;object-position:center 64%;}
+@media(max-width:760px){.teaching-figure-before{max-width:100%;}.teaching-figure-before img{height:290px;}}
+@media(max-width:520px){.teaching-figure-before img{height:245px;}}

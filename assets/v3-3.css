@@ -1,0 +1,44 @@
+/* Version 3.3: photographs selected from Eric Tu's supplied images. */
+.hero-v2 .hero-art-photo { overflow:visible; min-height: 620px; isolation:isolate; }
+.hero-v2 .hero-art-photo::before { inset:-5% -36% -10% -25%; }
+.hero-portrait { position:relative; width:min(435px, 90%); margin:34px 0 24px 28px; z-index:1; }
+.hero-portrait::before {content:'';position:absolute;inset:20px -18px -16px 17px;border:1px solid rgba(224,167,146,.48);z-index:-1;pointer-events:none;}
+.hero-portrait img { display:block; width:100%; height:545px; object-fit:cover; object-position:center 40%; border-radius:3px; box-shadow:0 27px 62px rgba(0,0,0,.22); }
+.hero-portrait figcaption {font-size:11px;line-height:1.5;text-transform:uppercase;letter-spacing:.13em;color:#b8c5c1;margin-top:17px;}
+.hero-portrait figcaption span {color:#df9580;margin:0 8px;}
+.research-portrait-figure,.teaching-talk-figure,.photo-evidence-img,.photo-lab-photo {margin:0;}
+.research-portrait-figure img,.teaching-talk-figure img,.photo-evidence-img img,.photo-lab-photo img {display:block;width:100%;height:auto;}
+.research-portrait-figure figcaption,.teaching-talk-figure figcaption,.photo-evidence-img figcaption,.photo-lab-photo figcaption {font-size:11px;line-height:1.65;color:#6b7777;margin-top:12px;}
+.research-portrait-figure {margin:35px 0 8px;max-width:570px;}
+.research-portrait-figure img {max-height:575px;object-fit:cover;object-position:center 30%;border-radius:3px;}
+.photo-evidence-section {background:#f5f3ed;}
+.photo-evidence-grid,.photo-lab-grid {display:grid;grid-template-columns:1.1fr .9fr;gap:8%;align-items:center;}
+.photo-evidence-img img {max-height:385px;object-fit:cover;object-position:center 45%;border-radius:3px;}
+.photo-evidence-copy h2,.photo-lab-text h2 {font:400 clamp(37px,3.7vw,58px)/1.1 var(--serif);letter-spacing:-.045em;margin:17px 0 24px;}
+.photo-evidence-copy h2 em,.photo-lab-text h2 em {font-weight:400;color:#b76d5c;}
+.photo-evidence-copy p,.photo-lab-text p {color:#576567;font-size:15px;line-height:1.9;max-width:500px;}
+.teaching-talk-figure {max-width:900px;margin:28px auto 0;}
+.teaching-talk-figure img {max-height:385px;object-fit:cover;object-position:center 90%;border-radius:3px;}
+.photo-lab-section {padding-top:25px;}
+.photo-lab-photo img {max-height:380px;object-fit:cover;object-position:center center;border-radius:3px;}
+@media(max-width:1000px){
+  .hero-v2 .hero-art-photo{min-height:540px;}
+  .hero-portrait{width:min(375px,91%);margin:26px auto;}
+  .hero-portrait img{height:465px;}
+}
+@media(max-width:850px){
+  .hero-v2 .hero-art-photo { height:auto;min-height:0;padding:15px 0 40px;overflow:visible; }
+  .hero-portrait{width:min(390px,88%);margin:0 auto;}
+  .hero-portrait img{height:465px;}
+  .photo-evidence-grid,.photo-lab-grid{grid-template-columns:1fr;gap:25px;}
+  .photo-evidence-copy,.photo-lab-text{max-width:640px;}
+}
+@media(max-width:540px){
+  .hero-v2 .hero-art-photo{height:auto;padding:8px 0 35px;}
+  .hero-portrait{width:min(320px,85%);margin:0 auto;}
+  .hero-portrait img{height:395px;}
+  .hero-portrait::before{inset:12px -10px -10px 10px;}
+  .research-portrait-figure img{max-height:475px;}
+  .teaching-talk-figure img,.photo-evidence-img img,.photo-lab-photo img{max-height:310px;}
+  .photo-evidence-copy h2,.photo-lab-text h2{font-size:39px;}
+}
