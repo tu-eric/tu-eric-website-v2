@@ -1,0 +1,4 @@
+# Preserve old Wowchemy article and profile links after a future domain switch
+/publication/*   /publications.html   301
+/authors/*       /about.html          301
+/project/*       /research.html       301
