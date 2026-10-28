@@ -18,13 +18,13 @@
     let n = 0;
     const term = (input?.value || '').trim().toLowerCase();
     items.forEach(item => {
-      const typeMatch = active === 'all' || item.dataset.category === active;
+      const typeMatch = active === 'all' || (active === 'open-resources' ? item.dataset.openResources === 'true' : item.dataset.category === active);
       const searchMatch = !term || (item.textContent || '').toLowerCase().includes(term);
       const visible = typeMatch && searchMatch;
       item.hidden = !visible;
       if (visible) n++;
     });
-    if(count) count.textContent = `${n} ${n===1?'publication':'publications'} shown`;
+    if(count) count.textContent = `${n} ${n===1?'entry':'entries'} shown`;
   };
   filters.forEach(button => button.addEventListener('click', () => {
     active = button.dataset.filter;
